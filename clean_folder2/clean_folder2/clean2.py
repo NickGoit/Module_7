@@ -118,15 +118,18 @@ def sort_in_dir(dir_path):
                 unknow_suffix.append(file.suffix)
 
 
+def main():
+    if len(sys.argv) < 2:
+        print('Please provide correct path')
+        exit()
+    current_path = sys.argv[1]
+    if not (os.path.exists(current_path) and Path(current_path).is_dir()):
+        print('inputed path is not existed or it\'s not a dir')
+        exit()
+    sort_in_dir(current_path)
+    print('Done!')
+
+
 if __name__ == '__main__':
-    def start_sort():
-        if len(sys.argv) < 2:
-            print('Please provide correct path')
-            exit()
-        current_path = sys.argv[1]
-        if not (os.path.exists(current_path) and Path(current_path).is_dir()):
-            print('inputed path is not existed or it\'s not a dir')
-            exit()
-        sort_in_dir(current_path)
-        print('Done!')
-    start_sort()
+    main()
+

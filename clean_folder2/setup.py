@@ -8,5 +8,5 @@ setup(name='clean_folder2',
       author_email='my.gryshyn@gmail.com',
       license='Free',
       packages=['clean_folder2'],
-      entry_points={'console_scripts': ['clean-folder2=clean_folder2.clean2:start_sort']}
+      entry_points={'console_scripts': ['clean-folder2=clean_folder2.clean2:main']}
 )
